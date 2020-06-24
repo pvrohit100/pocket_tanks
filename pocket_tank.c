@@ -4,7 +4,7 @@
 void delay();
 int main()
 {
-int r,p1=0,p2=0,i,x,y,c1=0,c2=10,ch,p=0,q=3,z=0;
+int r,p1=0,p2=0,i,x,y,c1=1,c2=9,ch,p=0,q=3,z=0;
 char name1[10],name2[10];
 printf("\n            POCKET TANKS mini \n");
 printf("\n              INSTRUCTIONS  \n");
@@ -21,8 +21,8 @@ for(i=0;i<=5;i++)
 {
 	if(i%2==0)	//p1
 	{for(y=20;y>=0;y--)                  //disp
-			{for(x=-3;x<=13;x++)
-		         { if(y==0&&(x==c1||x==c2))  printf(" #");
+			{for(x=-2;x<=11;x++)
+		         { if(y==0&&(x==c1))  printf("#1");if(y==0&&(x==c2))  printf("#2");
                              if(y==0&&(x!=c1||x!=c2))   printf("__");
                            else printf("  ");
 		          }printf("\n");
@@ -33,8 +33,8 @@ for(i=0;i<=5;i++)
 	else if(ch==1){++c1;}
 	else{}
 	for(y=20;y>=0;y--)                  //disp
-			{for(x=-3;x<=13;x++)
-		         { if(y==0&&(x==c1||x==c2))  printf(" #");
+			{for(x=-2;x<=11;x++)
+		         { if(y==0&&(x==c1))  printf("#1");if(y==0&&(x==c2))  printf("#2");
                              if(y==0&&(x!=c1||x!=c2))   printf("__");
                            else printf("  ");
 		          }printf("\n");
@@ -46,10 +46,10 @@ for(i=0;i<=5;i++)
 	if(p==4){--q;}
 	else if(p==6){++q;}
 	for(y=20;y>=0;y--)
-			{for(x=-3;x<=13;x++)
-		         { if(y==0&&(x==c1||x==c2))  printf(" #");
+			{for(x=-2;x<=11;x++)
+		         { if(y==0&&(x==c1))  printf("#1");if(y==0&&(x==c2))  printf("#2");
                             else if(y==0&&(x!=c1||x!=c2))   printf("__");
-                           else if(y==(c1-x)*(x-q)){ printf(" ."); }
+                           else if(y==(c1-x)*(x-q)){ printf(" *"); }
 			     else printf("  ");
 		          }printf("\n");
 			}
@@ -58,8 +58,8 @@ for(i=0;i<=5;i++)
 	printf("\n target locked \n");
 for(r=1;r<=10;r++)
 {for(y=20;y>=0;y--)
-			{for(x=-3;x<=13;x++)
-		         { if(y==0&&(x==c1||x==c2))  printf(" #");
+			{for(x=-2;x<=11;x++)
+		         { if(y==0&&(x==c1))  printf("#1");if(y==0&&(x==c2))  printf("#2");
                             else if(y==0&&(x!=c1||x!=c2))   printf("__");
                             else if((y==(c1-x)*(x-q))&&(x<=r)){ printf(" *"); }
 			     else printf("  ");
@@ -84,8 +84,8 @@ printf("\n %d                          %d\n",p1,p2);
 	else   //p2
 	{
 	for(y=20;y>=0;y--)                  //disp
-			{for(x=-3;x<=13;x++)
-		         { if(y==0&&(x==c1||x==c2))  printf(" #");
+			{for(x=-2;x<=11;x++)
+		         { if(y==0&&(x==c1))  printf("#1");if(y==0&&(x==c2))  printf("#2");
                              if(y==0&&(x!=c1||x!=c2))   printf("__");
                            else printf("  ");
 		          }printf("\n");
@@ -96,8 +96,8 @@ printf("\n %d                          %d\n",p1,p2);
 	else if(ch==1){++c2;}
 	else{}
 	for(y=20;y>=0;y--)                  //disp
-			{for(x=-3;x<=13;x++)
-		         { if(y==0&&(x==c1||x==c2))  printf(" #");
+			{for(x=-2;x<=11;x++)
+		         { if(y==0&&(x==c1))  printf("#1");if(y==0&&(x==c2))  printf("#2");
                              if(y==0&&(x!=c1||x!=c2))   printf("__");
                            else printf("  ");
 		          }printf("\n");
@@ -109,10 +109,10 @@ printf("\n %d                          %d\n",p1,p2);
 	if(z==4){--q;}
 	else if(z==6){++q;}
 	for(y=20;y>=0;y--)
-			{for(x=-3;x<=13;x++)
-		         { if(y==0&&(x==c1||x==c2))  printf(" #");
+			{for(x=-2;x<=11;x++)
+		         { if(y==0&&(x==c1))  printf("#1");if(y==0&&(x==c2))  printf("#2");
                             else if(y==0&&(x!=c1||x!=c2))   printf("__");
-                           else if(y==(c2-x)*(x-q)){ printf(" ."); }
+                           else if(y==(c2-x)*(x-q)){ printf(" *"); }
 			     else printf("  ");
 		          }printf("\n");
 			}
@@ -122,8 +122,8 @@ printf("\n %d                          %d\n",p1,p2);
 for(r=10;r>0;r--)
 {
 for(y=20;y>=0;y--)
-			{for(x=-3;x<=13;x++)
-		         { if(y==0&&(x==c1||x==c2))  printf(" #");
+			{for(x=-2;x<=11;x++)
+		         { if(y==0&&(x==c1))  printf("#1");if(y==0&&(x==c2))  printf("#2");
                             else if(y==0&&(x!=c1||x!=c2))   printf("__");
                            else if((x>r)&&(y==(c2-x)*(x-q))){ printf(" *"); }
 			     else printf("  ");
