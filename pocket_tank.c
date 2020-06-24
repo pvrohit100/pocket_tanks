@@ -147,6 +147,7 @@ printf("\n%d                          %d \n",p1,p2);
 if(p1>p2)printf("\n %s wins\n",name1);
 else if(p1<p2)printf("\n %s wins\n",name2);
 else printf("\n DRAW MATCH\n");
+	scanf("%d",&i);
 return 0;
 }
 void delay(){
